@@ -1,36 +1,21 @@
 import React, { useState } from 'react';
 import { Modal, Button } from 'antd';
+import PhoneInput from 'react-phone-number-input';
 
-function ModalComponent({ isModalVisible, handleOk, handleCancel }) {
-	const [ values, setValues ] = useState({
-		full_name: '',
-		email: '',
-		orgName: '',
-		serviceType: '',
-		description: '',
-		serviceTypes: [
-			'Conseil & stratégie',
-			'Identité de marque',
-			'Réseaux sociaux',
-			'Développement web & mobile',
-			'Médiatisation',
-			'Référencement'
-		]
-	});
-
-	const { full_name, email, orgName, serviceType, serviceTypes, description } = values;
+function ModalComponent({ isModalVisible, handleOk, handleCancel, values, setValues }) {
+	const { full_name, email, orgName, serviceType, serviceTypes, description, phone } = values;
 
 	return (
 		<Modal
-			title="Dites-nous en plus sur vos besoin. "
+			title="Dites-nous en plus sur le service que vous voulez recevoir. "
 			visible={isModalVisible}
 			onOk={() => handleOk(values)}
 			onCancel={handleCancel}
 		>
 			<form>
 				<div className="form-row">
-					<div className="form-group col-md-6">
-						<label htmlFor="full_name">Votre nom complet</label>
+					<div className="form-group col-md-12">
+						<label htmlFor="full_name">Nom & prénom</label>
 						<input
 							type="text"
 							className="form-control"
@@ -54,7 +39,16 @@ function ModalComponent({ isModalVisible, handleOk, handleCancel }) {
 						/>
 					</div>
 					<div className="form-group col-md-6">
-						<label htmlFor="orgName">Nom de votre société</label>
+						<label htmlFor="phone">Téléphone</label>
+						<PhoneInput
+							placeholder="Enter phone number"
+							value={phone}
+							className="form-control"
+							onChange={(e) => setValues({ ...values, phone: e })}
+						/>
+					</div>
+					<div className="form-group col-md-6">
+						<label htmlFor="orgName">Société</label>
 						<input
 							type="text"
 							className="form-control"
@@ -86,7 +80,7 @@ function ModalComponent({ isModalVisible, handleOk, handleCancel }) {
 					</div>
 					<div className="form-group col-md-12">
 						<label htmlFor="description" className="form-label">
-							Decrivez votre projet
+							Décrivez-nous votre projet et vos objectifs
 						</label>
 						<textarea
 							className="form-control"

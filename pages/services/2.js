@@ -28,7 +28,7 @@ function SecondServicePage() {
 			/>
 			<ServiceInfoRight
 				title={'La méthodologie ne s’improvise pas'}
-				description={`Une expérience sur les enjeux des marques positionne NUN SARL comme un spécialiste de la création d’identités visuelles marquantes et disruptives. Sans faire de concurrence aux leaders que sont les pure players du branding, Adveris adopte une approche pragmatique de la recherche d’identités de marques qui sont ensuite déclinées dans l’univers digital.`}
+				description={`Une expérience sur les enjeux des marques positionne NUN SARL comme un spécialiste de la création d’identités visuelles marquantes et disruptives. Sans faire de concurrence aux leaders que sont les pure players du branding, NUN SARL adopte une approche pragmatique de la recherche d’identités de marques qui sont ensuite déclinées dans l’univers digital.`}
 				imgSrc={'/static/images/services/2/2.jpg'}
 			/>
 

@@ -10,13 +10,16 @@
   "dependencies": {
     "@zeit/next-css": "^1.0.1",
     "antd": "^4.9.4",
+    "axios": "^0.21.1",
     "bootstrap": "^4.5.3",
     "next": "10.0.3",
     "react": "17.0.1",
     "react-bootstrap": "^1.4.0",
     "react-dom": "17.0.1",
     "react-icons": "^4.1.0",
+    "react-phone-number-input": "^3.1.8",
     "react-redux": "^7.2.2",
+    "react-toastify": "^6.2.0",
     "redux": "^4.0.5",
     "redux-devtools-extension": "^2.13.8"
   }

@@ -23,7 +23,7 @@ function Counter() {
 								description={
 									'Ingénieur logiciel de formation. Développeur Web Fullstack de profession.'
 								}
-								jobTitle={'Développeur Web & Rédacteur Web'}
+								jobTitle={'Développeur & Rédacteur Web'}
 							/>
 							<TeamMember />
 						</div>
