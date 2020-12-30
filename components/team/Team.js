@@ -25,7 +25,14 @@ function Counter() {
 								}
 								jobTitle={'Développeur & Rédacteur Web'}
 							/>
-							<TeamMember />
+							<TeamMember
+								imgSrc={'/static/images/team1.jpeg'}
+								fullname={'DINI ATHOUMANI RAYYANE'}
+								description={
+									'Attaché de Presse du Ministre des Finances , du Budget et du secteur Bancaire chez MINISTÈRE DES FINANCES DU BUDGET ET DU SECTEUR BANCAIRE-COMORES'
+								}
+								jobTitle={'CEO'}
+							/>
 						</div>
 					</div>
 				</div>

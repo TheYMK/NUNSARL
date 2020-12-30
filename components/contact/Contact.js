@@ -22,7 +22,7 @@ function Contact() {
 								<h5 className="margin-bottom-30">Informations</h5>
 								<div className="contact-text">
 									<p>Route D’iconi Malouzini</p>
-									<p>+269 3326321 / +269 4700053 / +269 3326321</p>
+									<p>+269 3346427 / +269 4700053</p>
 									<p>contactshopnun@gmail.com</p>
 								</div>
 							</div>

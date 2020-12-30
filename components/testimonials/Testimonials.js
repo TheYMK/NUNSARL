@@ -1,4 +1,5 @@
 import React from 'react';
+import Brands from './Brands';
 import TestimonialItem from './TestimonialItem';
 
 function Testimonials() {
@@ -16,6 +17,7 @@ function Testimonials() {
 									<p>Ils ont choisis de nous faire confiance, et voici ce qu'ils en pensent.</p>
 								</div>
 							</div>
+							{/* <Brands /> */}
 							{/* Testimonial Item Start */}
 							<div className="row">
 								<TestimonialItem

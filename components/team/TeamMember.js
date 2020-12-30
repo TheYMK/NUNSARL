@@ -3,7 +3,7 @@ import React from 'react';
 function TeamMember({ imgSrc, fullname, jobTitle, description }) {
 	return (
 		<React.Fragment>
-			<div className="col-xs-12 col-sm-6 col-md-4">
+			<div className="col-xs-12 col-sm-6 col-md-4 mt-3">
 				<div className="image-flip">
 					<div className="mainflip flip-0">
 						<div className="frontside">

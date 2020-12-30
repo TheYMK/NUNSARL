@@ -20,23 +20,23 @@ function Services() {
 								<ServiceItem title="Identité de marque" icon={'fas fa-bullseye'} link={'/services/2'} />
 								{/* Service Item End */}
 								{/* Service Item Start */}
-								<ServiceItem title="Réseaux sociaux" icon={'fas fa-hashtag'} link={'/services/1'} />
+								<ServiceItem title="Réseaux sociaux" icon={'fas fa-hashtag'} link={'/services/3'} />
 								{/* Service Item End */}
 								{/* Service Item Start */}
 								<ServiceItem
 									title="Développement web & mobile"
 									icon={'fas fa-code'}
-									link={'/services/1'}
+									link={'/services/4'}
 								/>
 								{/* Service Item End */}
 								{/* Service Item Start */}
 								{/* <ServiceItem title="Studio de création" /> */}
 								{/* Service Item End */}
 								{/* Service Item Start */}
-								<ServiceItem title="Médiatisation" icon={'fas fa-video'} link={'/services/1'} />
+								<ServiceItem title="Médiatisation" icon={'fas fa-video'} link={'/services/5'} />
 								{/* Service Item End */}
 								{/* Service Item Start */}
-								<ServiceItem title="Référencement" icon={'fas fa-globe'} link={'/services/1'} />
+								<ServiceItem title="Référencement" icon={'fas fa-globe'} link={'/services/6'} />
 								{/* Service Item End */}
 							</div>
 						</div>

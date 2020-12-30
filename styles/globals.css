@@ -1934,3 +1934,20 @@ Single Service
     margin-bottom: 40px;
   }
 }
+
+
+/* Brands */
+.brands {
+  margin: 100px auto;
+}
+
+.brands img {
+  width: 200px;
+    cursor: pointer;
+    filter: grayscale(100%);
+}
+
+.brands img:hover {
+  filter: grayscale(0%);
+
+}

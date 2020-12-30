@@ -5,7 +5,6 @@ import 'react-toastify/dist/ReactToastify.css';
 import Sidebar from './header/Sidebar';
 import Preloader from './preloader/Preloader';
 import 'react-phone-number-input/style.css';
-import 'antd/dist/antd.css';
 
 function Layout({ children }) {
 	return (

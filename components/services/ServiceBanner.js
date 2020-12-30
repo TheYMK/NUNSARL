@@ -57,7 +57,7 @@ function ServiceBanner({ title }) {
 
 								{/* <Link href="#"> */}
 								<button className="main-button-slider" onClick={showModal}>
-									Parlez nous de votre projet
+									Demander un devis
 								</button>
 								{/* </Link> */}
 							</div>

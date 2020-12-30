@@ -1,4 +1,5 @@
 import 'bootstrap/dist/css/bootstrap.min.css';
+import 'antd/dist/antd.css';
 import '../styles/font-awesome.css';
 import '../styles/globals.css';
 import { createStore } from 'redux';

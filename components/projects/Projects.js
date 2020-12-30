@@ -26,8 +26,18 @@ function Projects() {
 								"Notre vision est de développer la visibilité de votre marque en tenant compte de la lisibilité et l'identité de votre entreprise.La partie graphique permet de cibler au mieux vos contacts entrants et d'améliorer la qualité de votre trafic."
 							}
 						/>
-						{/* <ProjectItem />
-						<ProjectItem /> */}
+						<ProjectItem
+							title={'Graphisme'}
+							description={
+								"Notre vision est de développer la visibilité de votre marque en tenant compte de la lisibilité et l'identité de votre entreprise.La partie graphique permet de cibler au mieux vos contacts entrants et d'améliorer la qualité de votre trafic."
+							}
+						/>
+						<ProjectItem
+							title={'Graphisme'}
+							description={
+								"Notre vision est de développer la visibilité de votre marque en tenant compte de la lisibilité et l'identité de votre entreprise.La partie graphique permet de cibler au mieux vos contacts entrants et d'améliorer la qualité de votre trafic."
+							}
+						/>
 					</div>
 					{/* Blogs End */}
 				</div>
