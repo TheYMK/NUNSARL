@@ -3,7 +3,7 @@ import React from 'react';
 const TeamMember = ({ name, jobTitle, twitter_link, linkedin_link, imgSrc }) => {
 	return (
 		<div className="col-lg-3 col-md-6 d-flex align-items-stretch">
-			<div className="team" data-aos="fade-up">
+			<div className="team">
 				<div className="team-img">
 					<img src={imgSrc} className="img-fluid" alt="" />
 					<div className="social">

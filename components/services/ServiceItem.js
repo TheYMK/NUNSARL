@@ -10,7 +10,7 @@ function ServiceItem({ title, icon, link }) {
 			>
 				<Link href={link}>
 					<a>
-						<div className="features-small-item" data-aos="fade-up">
+						<div className="features-small-item">
 							<div className="icon">
 								<i className={icon} />
 							</div>

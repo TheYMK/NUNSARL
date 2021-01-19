@@ -107,7 +107,7 @@ function RegisterComplete() {
 		<React.Fragment>
 			<Layout>
 				<Banner title={'Complete registration'} />
-				<div className="container p-5">
+				<div className="container-fluid p-5">
 					<div className="row">
 						<div className="col-md-6 offset-md-3">
 							<h4 className="mb-5">Complete Registration</h4>

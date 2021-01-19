@@ -7,25 +7,25 @@ const AdminDashboard = () => {
 			<section id="admin-menu" className="admin-menu">
 				<div className="">
 					<ul className="nav nav-tabs row d-flex">
-						<li className="nav-item col-3" data-aos="zoom-in">
+						<li className="nav-item col-3">
 							<a className="nav-link active show" data-toggle="tab" href="#tab-1">
 								<i className="ri-briefcase-4-fill" />
 								<h4 className="d-none d-lg-block">Projets</h4>
 							</a>
 						</li>
-						<li className="nav-item col-3" data-aos="zoom-in" data-aos-delay="100">
+						<li className="nav-item col-3">
 							<a className="nav-link" data-toggle="tab" href="#tab-2">
 								<i className="ri-group-fill" />
 								<h4 className="d-none d-lg-block">Equipes</h4>
 							</a>
 						</li>
-						<li className="nav-item col-3" data-aos="zoom-in" data-aos-delay="200">
+						<li className="nav-item col-3">
 							<a className="nav-link" data-toggle="tab" href="#tab-3">
 								<i className="ri-service-fill" />
 								<h4 className="d-none d-lg-block">Services</h4>
 							</a>
 						</li>
-						<li className="nav-item col-3" data-aos="zoom-in" data-aos-delay="300">
+						<li className="nav-item col-3">
 							<a className="nav-link" data-toggle="tab" href="#tab-4">
 								<i className="ri-shopping-cart-fill" />
 								<h4 className="d-none d-lg-block">Demandes</h4>
@@ -33,7 +33,7 @@ const AdminDashboard = () => {
 						</li>
 					</ul>
 
-					<div className="tab-content" data-aos="fade-up">
+					<div className="tab-content">
 						<div className="tab-pane active show" id="tab-1">
 							<ManageProjects />
 						</div>

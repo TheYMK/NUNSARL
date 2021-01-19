@@ -14,7 +14,7 @@ const PortfolioDetails = ({ project }) => {
 	return (
 		<section id="portfolio-details" className="portfolio-details">
 			<div className="container">
-				<div className="portfolio-details-container" data-aos="fade-up">
+				<div className="portfolio-details-container">
 					{/* <div className="owl-carousel portfolio-details-carousel">
 						<img src="/static/img/portfolio/portfolio-details-1.jpg" className="img-fluid" alt="" />
 						<img src="/static/img/portfolio/portfolio-details-2.jpg" className="img-fluid" alt="" />

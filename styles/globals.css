@@ -293,6 +293,7 @@ body {
 @media (max-width: 991px) {
   html, body {
     overflow-x: hidden;
+    
   }
   .mobile-top-fix {
     margin-top: 30px;

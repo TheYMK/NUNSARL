@@ -6,12 +6,12 @@ const Portfolio = ({ projects }) => {
 		<section id="portfolio" className="portfolio section">
 			<div className="container mt-5">
 				<div className="center-heading">
-					<div className="section-title" data-aos="zoom-out">
+					<div className="section-title">
 						<h2>Portfolio</h2>
 					</div>
 				</div>
 
-				<ul id="portfolio-flters" className="d-flex justify-content-end" data-aos="fade-up">
+				<ul id="portfolio-flters" className="d-flex justify-content-end">
 					<li data-filter="*" className="filter-active">
 						All
 					</li>
@@ -19,7 +19,7 @@ const Portfolio = ({ projects }) => {
 					<li data-filter=".filter-web">Web</li>
 				</ul>
 
-				<div className="row portfolio-container" data-aos="fade-up">
+				<div className="row portfolio-container">
 					{projects.map((p) => (
 						<PortfolioItem
 							type={p.category.toLowerCase()}

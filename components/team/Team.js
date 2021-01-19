@@ -6,9 +6,7 @@ const Team = () => {
 		<section id="team" className="teams section">
 			<div className="container">
 				<div className="center-heading">
-					<h2 className="section-title" data-aos="zoom-out">
-						Notre Équipe
-					</h2>
+					<h2 className="section-title">Notre Équipe</h2>
 				</div>
 				<div className="row mt-5">
 					<TeamMember
