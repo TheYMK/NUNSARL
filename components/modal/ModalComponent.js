@@ -11,6 +11,8 @@ function ModalComponent({ isModalVisible, handleOk, handleCancel, values, setVal
 			visible={isModalVisible}
 			onOk={() => handleOk(values)}
 			onCancel={handleCancel}
+			okText="Envoyer"
+			cancelText="Annuler"
 		>
 			<form>
 				<div className="form-row">

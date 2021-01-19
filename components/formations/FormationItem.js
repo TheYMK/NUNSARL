@@ -5,8 +5,13 @@ function FormationItem({ title, description, icon, firstColumn, secondColumn }) 
 	return (
 		<React.Fragment>
 			<div className="col-lg-6 col-md-6 col-sm-12 col-12">
-				<Link href="#">
-					<a className="mini-box">
+				<Link href="/">
+					<a
+						className="mini-box"
+						data-aos="flip-left"
+						data-aos-easing="ease-out-cubic"
+						data-aos-duration="3000"
+					>
 						<i className={icon} style={{ marginTop: '10px', fontSize: '34px', color: '#eb444d' }}>
 							{/* <img src="/static/images/work-process-item-01.png" alt="" /> */}
 						</i>

@@ -1,6 +1,40 @@
-import React from 'react';
+import React, { useState } from 'react';
+import { Spin } from 'antd';
+import { sendMessage } from '../../actions/form';
+import { toast } from 'react-toastify';
+import { LoadingOutlined } from '@ant-design/icons';
+
+const antIcon = <LoadingOutlined style={{ fontSize: 24 }} spin />;
 
 function Contact() {
+	const [ values, setValues ] = useState({
+		name: '',
+		email: '',
+		message: ''
+	});
+
+	const [ loading, setLoading ] = useState(false);
+	const { name, email, message } = values;
+
+	const handleSubmit = (e) => {
+		e.preventDefault();
+		setLoading(true);
+
+		sendMessage(values)
+			.then((res) => {
+				toast.success(
+					'Votre message a bien été reçu. Nous nous engageons a vous répondre le plus rapidement possible.'
+				);
+				setValues({ ...values, name: '', email: '', message: '' });
+				setLoading(false);
+			})
+			.catch((err) => {
+				toast.error(`Une erreur s'est produite lors de l'envoie de votre message. Veuillez réessayer.`);
+				setValues({ ...values, name: '', email: '', message: '' });
+				setLoading(false);
+			});
+	};
+
 	return (
 		<React.Fragment>
 			<section className="section colored" id="contact-us">
@@ -29,7 +63,7 @@ function Contact() {
 
 							<div className="col-lg-8 col-md-6 col-sm-12">
 								<div className="contact-form">
-									<form id="contact" action="" method="get">
+									<form id="contact" onSubmit={handleSubmit}>
 										<div className="row">
 											<div className="col-lg-6 col-md-12 col-sm-12">
 												<fieldset>
@@ -38,6 +72,8 @@ function Contact() {
 														type="text"
 														className="form-control"
 														id="name"
+														value={name}
+														onChange={(e) => setValues({ ...values, name: e.target.value })}
 														placeholder="Votre nom complet"
 														required
 													/>
@@ -51,6 +87,9 @@ function Contact() {
 														className="form-control"
 														id="email"
 														placeholder="Votre adresse e-mail "
+														value={email}
+														onChange={(e) =>
+															setValues({ ...values, email: e.target.value })}
 														required
 													/>
 												</fieldset>
@@ -63,6 +102,9 @@ function Contact() {
 														className="form-control"
 														id="message"
 														placeholder="Votre message..."
+														value={message}
+														onChange={(e) =>
+															setValues({ ...values, message: e.target.value })}
 														required=""
 													/>
 												</fieldset>
@@ -70,7 +112,7 @@ function Contact() {
 											<div className="col-lg-12">
 												<fieldset>
 													<button type="submit" id="form-submit" className="main-button">
-														Envoyer
+														{loading ? <Spin indicator={antIcon} /> : 'Envoyer'}
 													</button>
 												</fieldset>
 											</div>

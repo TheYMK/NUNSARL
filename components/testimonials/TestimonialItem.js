@@ -4,7 +4,7 @@ function TestimonialItem({ message, imgSrc, name, company, jobTitle }) {
 	return (
 		<React.Fragment>
 			<div className="col-lg-4 col-md-6 col-sm-12">
-				<div className="team-item">
+				<div className="team-item" data-aos="zoom-in">
 					<div className="team-content">
 						<i>
 							<img src="/static/images/testimonial-icon.png" alt="" />

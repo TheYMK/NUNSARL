@@ -53,13 +53,6 @@ function Formations() {
 										inter-entreprise permettent également à vos salariés de se former en-dehors de
 										l’entreprise et de rencontrer des salariés d’autres horizons. Nous nous occupons
 										de toute la logistique et de l’organisation.
-										<br />
-										<br />
-										Chez <span style={{ textDecoration: 'none', fontWeight: '700' }}>
-											NUN SARL
-										</span>, on vous propose donc des contenus adaptés à vos besoins précis. Nous
-										nous adaptons à chaque stratégie d’entreprise afin de fournir une réponse
-										adaptée et réaliste.
 									</p>
 								</div>
 							</div>

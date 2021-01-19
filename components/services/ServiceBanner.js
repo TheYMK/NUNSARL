@@ -30,11 +30,12 @@ function ServiceBanner({ title }) {
 
 	const handleOk = (v) => {
 		// console.log(v);
+		setIsModalVisible(false);
 		sendServiceDemand(v)
 			.then((res) => {
 				toast.success('Votre demande a bien été reçu. Nous vous contacterons le plus tôt possible.');
 				setValues({ ...values, full_name: '', email: '', orgName: '', serviceType: '', description: '' });
-				setIsModalVisible(false);
+				// setIsModalVisible(false);
 			})
 			.catch((err) => {
 				toast.error("Une erreur est survenu lors de l'envoie de votre demande. Veuillez réessayer.");

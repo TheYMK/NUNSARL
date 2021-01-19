@@ -1,75 +1,27 @@
 import React from 'react';
 
-function TeamMember({ imgSrc, fullname, jobTitle, description }) {
+const TeamMember = ({ name, jobTitle, twitter_link, linkedin_link, imgSrc }) => {
 	return (
-		<React.Fragment>
-			<div className="col-xs-12 col-sm-6 col-md-4 mt-3">
-				<div className="image-flip">
-					<div className="mainflip flip-0">
-						<div className="frontside">
-							<div className="card">
-								<div className="card-body text-center">
-									<p>
-										<img className="img-fluid" src={imgSrc} alt="team member" />
-										<h4 className="card-title mt-3" style={{ fontSize: '18px' }}>
-											{fullname}
-										</h4>
-										<p className="card-text">{jobTitle}</p>
-									</p>
-								</div>
-							</div>
-						</div>
-						<div className="backside">
-							<div className="card">
-								<div className="card-body text-center mt-4">
-									<h4 className="card-title">{fullname}</h4>
-									<p className="card-text">{description}</p>
-									<ul className="list-inline">
-										<li className="list-inline-item">
-											<a
-												className="social-icon text-xs-center"
-												target="_blank"
-												href="https://www.fiverr.com/share/qb8D02"
-											>
-												<i className="fa fa-facebook" />
-											</a>
-										</li>
-										<li className="list-inline-item">
-											<a
-												className="social-icon text-xs-center"
-												target="_blank"
-												href="https://www.fiverr.com/share/qb8D02"
-											>
-												<i className="fa fa-twitter" />
-											</a>
-										</li>
-										<li className="list-inline-item">
-											<a
-												className="social-icon text-xs-center"
-												target="_blank"
-												href="https://www.fiverr.com/share/qb8D02"
-											>
-												<i className="fa fa-skype" />
-											</a>
-										</li>
-										<li className="list-inline-item">
-											<a
-												className="social-icon text-xs-center"
-												target="_blank"
-												href="https://www.fiverr.com/share/qb8D02"
-											>
-												<i className="fa fa-google" />
-											</a>
-										</li>
-									</ul>
-								</div>
-							</div>
-						</div>
+		<div className="col-lg-3 col-md-6 d-flex align-items-stretch">
+			<div className="team" data-aos="fade-up">
+				<div className="team-img">
+					<img src={imgSrc} className="img-fluid" alt="" />
+					<div className="social">
+						<a href={twitter_link} target="blank">
+							<i className="fa fa-twitter" />
+						</a>
+						<a href={linkedin_link} target="blank">
+							<i className="fa fa-linkedin" />
+						</a>
 					</div>
 				</div>
+				<div className="team-info">
+					<h4>{name}</h4>
+					<span>{jobTitle}</span>
+				</div>
 			</div>
-		</React.Fragment>
+		</div>
 	);
-}
+};
 
 export default TeamMember;

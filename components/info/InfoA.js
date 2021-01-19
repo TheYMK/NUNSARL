@@ -5,7 +5,7 @@ function InfoA() {
 		<React.Fragment>
 			<section className="section padding-top-70 padding-bottom-0" id="about">
 				<div className="container">
-					<div className="row">
+					<div className="row" data-aos="fade-right">
 						<div
 							className="col-lg-5 col-md-12 col-sm-12 align-self-center"
 							data-scroll-reveal="enter left move 30px over 0.6s after 0.4s"

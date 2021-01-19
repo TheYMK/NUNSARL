@@ -11,12 +11,12 @@ function ProjectItem({ title, description }) {
 					</div>
 					<div className="blog-content">
 						<h3>
-							<Link href="#">
+							<Link href="/">
 								<a>{title}</a>
 							</Link>
 						</h3>
 						<div className="text">{description}</div>
-						<a href="#" className="main-button">
+						<a href="/" className="main-button">
 							Voir plus
 						</a>
 					</div>

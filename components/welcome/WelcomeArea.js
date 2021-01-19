@@ -1,11 +1,16 @@
 import React, { useState } from 'react';
 import Link from 'next/link';
 import ModalComponent from '../modal/ModalComponent';
+import { useDispatch, useSelector } from 'react-redux';
 import { sendServiceDemand } from '../../actions/form';
 import { toast } from 'react-toastify';
+import firebase from 'firebase';
+import Router from 'next/router';
 
 function WelcomeArea() {
 	const [ isModalVisible, setIsModalVisible ] = useState(false);
+	const dispatch = useDispatch();
+	const { user } = useSelector((state) => ({ ...state }));
 
 	const [ values, setValues ] = useState({
 		full_name: '',
@@ -46,6 +51,17 @@ function WelcomeArea() {
 		setIsModalVisible(false);
 	};
 
+	const logout = () => {
+		firebase.auth().signOut();
+
+		dispatch({
+			type: 'LOGOUT',
+			payload: null
+		});
+		toast.success('Vous avez été deconnecté');
+		Router.push('/');
+	};
+
 	return (
 		<React.Fragment>
 			<div className="welcome-area" id="welcome">
@@ -58,6 +74,28 @@ function WelcomeArea() {
 									digitales sur mesure
 								</h1>
 								<p>Nous faisons de votre ambition un projet collectif.</p>
+
+								{user &&
+								user.role === 'admin' && (
+									<Link href="/admin/dashboard">
+										<a className="main-button-slider mr-3" style={{ background: '#000' }}>
+											Dashboard
+										</a>
+									</Link>
+								)}
+
+								{user &&
+								user.role === 'admin' && (
+									<button
+										className="main-button-slider mr-3"
+										style={{ background: '#000' }}
+										onClick={logout}
+										href=""
+									>
+										Logout
+									</button>
+								)}
+
 								{/* <Link href="#"> */}
 								<button className="main-button-slider" onClick={showModal}>
 									Demander un devis

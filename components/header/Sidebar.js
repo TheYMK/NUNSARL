@@ -36,11 +36,11 @@ function Sidebar() {
 						<Link href="/#formations" onClick={handleCloseSidebar}>
 							<a className="sidebar__link">Nos Formations</a>
 						</Link>
+						<Link href="/#portfolio" onClick={handleCloseSidebar}>
+							<a className="sidebar__link">Nos Réalisation</a>
+						</Link>
 						<Link href="/#team" onClick={handleCloseSidebar}>
 							<a className="sidebar__link">L'Équipe</a>
-						</Link>
-						<Link href="/#projects" onClick={handleCloseSidebar}>
-							<a className="sidebar__link">Nos Réalisation</a>
 						</Link>
 					</ul>
 					<div className="sidebar__btnWrap" onClick={handleCloseSidebar}>

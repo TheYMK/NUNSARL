@@ -5,7 +5,7 @@ function InfoB() {
 		<React.Fragment>
 			<section className="section padding-bottom-100">
 				<div className="container">
-					<div className="row">
+					<div className="row" data-aos="fade-left">
 						<div className="col-lg-6 col-md-12 col-sm-12 align-self-center mobile-bottom-fix">
 							<div className="left-heading">
 								<h2 className="section-title">
