@@ -50,35 +50,38 @@ function Header() {
 								{/* Menu Start */}
 								<ul className="nav">
 									<li>
-										<Link href="/#services">
-											<a className="">Services</a>
-										</Link>
+										<a className="" href="/#services">
+											Services
+										</a>
 									</li>
 									<li>
-										<Link href="/#about">
-											<a className="">À Propos</a>
-										</Link>
+										<a className="" href="/#about">
+											À Propos
+										</a>
 									</li>
 									<li>
-										<Link href="/#formations">
-											<a className="">Nos Formations</a>
-										</Link>
+										<a className="" href="/#mission">
+											Notre Mission
+										</a>
 									</li>
 									<li>
-										<Link href="/#portfolio">
-											<a className="">Nos Réalisation</a>
-										</Link>
+										<a className="" href="/#formations">
+											Nos Formations
+										</a>
 									</li>
 									<li>
-										<Link href="/#team">
-											<a className="">L'Équipe</a>
-										</Link>
+										<a href="/#portfolio">Nos Réalisation</a>
+									</li>
+									<li>
+										<a className="" href="/#team">
+											L'Équipe
+										</a>
 									</li>
 
 									<li>
-										<Link href="/#contact">
-											<a className="">Contactez Nous</a>
-										</Link>
+										<a className="" href="/#contact">
+											Contactez Nous
+										</a>
 									</li>
 									{/* {!user && (
 										<li className="">

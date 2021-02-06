@@ -27,26 +27,34 @@ function Sidebar() {
 				</div>
 				<div className="sidebar__wrapper">
 					<ul className="sidebar__menu">
-						<Link href="/#services" onClick={handleCloseSidebar}>
-							<a className="sidebar__link">Services</a>
-						</Link>
-						<Link href="/#about" onClick={handleCloseSidebar}>
-							<a className="sidebar__link">À Propos</a>
-						</Link>
-						<Link href="/#formations" onClick={handleCloseSidebar}>
-							<a className="sidebar__link">Nos Formations</a>
-						</Link>
-						<Link href="/#portfolio" onClick={handleCloseSidebar}>
-							<a className="sidebar__link">Nos Réalisation</a>
-						</Link>
-						<Link href="/#team" onClick={handleCloseSidebar}>
-							<a className="sidebar__link">L'Équipe</a>
-						</Link>
+						<a className="sidebar__link" href="/#services" onClick={handleCloseSidebar}>
+							Services
+						</a>
+
+						<a className="sidebar__link" href="/#about" onClick={handleCloseSidebar}>
+							À Propos
+						</a>
+
+						<a className="sidebar__link" href="/#mission" onClick={handleCloseSidebar}>
+							Notre Mission
+						</a>
+
+						<a className="sidebar__link" href="/#formations" onClick={handleCloseSidebar}>
+							Nos Formations
+						</a>
+
+						<a className="sidebar__link" href="/#portfolio" onClick={handleCloseSidebar}>
+							Nos Réalisation
+						</a>
+
+						<a className="sidebar__link" href="/#team" onClick={handleCloseSidebar}>
+							L'Équipe
+						</a>
 					</ul>
 					<div className="sidebar__btnWrap" onClick={handleCloseSidebar}>
-						<Link href="/#contact">
-							<button className="sidebar__routelink">Contact</button>
-						</Link>
+						<a className="sidebar__routelink" href="/#contact">
+							Contact
+						</a>
 					</div>
 				</div>
 			</aside>

@@ -11,7 +11,12 @@ function ThirdServicePage() {
 		<React.Fragment>
 			<Layout>
 				{/* Banner */}
-				<ServiceBanner title={'Réseaux sociaux'} />
+				<ServiceBanner
+					title={'Réseaux sociaux'}
+					description={
+						'Contact media, médiaplanning, achat d’espace média et hors média, conférence de presse, suivi de retombées médiatiques'
+					}
+				/>
 				<div className="container mt-5 p-5">
 					<p className="text-center" style={{ color: '#777' }}>
 						Les réseaux sociaux représentent aujourd’hui le premier point de contact d’une organisation avec

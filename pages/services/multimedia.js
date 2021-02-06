@@ -11,7 +11,7 @@ function FifthServicePage() {
 		<React.Fragment>
 			<Layout>
 				{/* Banner */}
-				<ServiceBanner title={'Médiatisation'} />
+				<ServiceBanner title={'Multimédia'} description={'Spot publicitaire (TV et Radio), publi-reportage'} />
 				<div className="container mt-5 p-5">
 					<p className="text-center" style={{ color: '#777' }}>
 						Que l’on veuille diffuser des messages au plus grand nombre, développer sa communauté ou même

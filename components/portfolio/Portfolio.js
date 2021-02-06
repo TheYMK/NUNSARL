@@ -7,7 +7,7 @@ const Portfolio = ({ projects }) => {
 			<div className="container mt-5">
 				<div className="center-heading">
 					<div className="section-title">
-						<h2>Portfolio</h2>
+						<h2 style={{ fontWeight: '700' }}>Nos Réalisations</h2>
 					</div>
 				</div>
 

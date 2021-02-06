@@ -21,11 +21,11 @@ function WelcomeArea() {
 		phone: '',
 		serviceTypes: [
 			'Conseil & stratégie',
-			'Identité de marque',
+			'Identité visuelle et graphique',
 			'Réseaux sociaux',
-			'Développement web & mobile',
-			'Médiatisation',
-			'Référencement'
+			'Web, mobile & référencement',
+			'Multimédia',
+			'Communication évènementielle'
 		]
 	});
 

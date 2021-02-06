@@ -880,7 +880,8 @@ parallax & home seperator
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center center;
-  background-image: url(/static/images/work-process-bg.png);
+  /* background-image: url(/static/images/work-process-bg.png); */
+  background-color: #eb444d;
   z-index: 2;
   top: -20%;
   left: -20%;
@@ -1148,7 +1149,7 @@ team
 
 .team-item i {
   display: block;
-  margin-left: 25px;
+  /* margin-left: 25px; */
   margin-top: 25px;
   font-size: 30px;
   color: #eb444d;
@@ -1465,7 +1466,8 @@ footer
 --------------------------------------------- 
 */
 footer {
-  background-image: linear-gradient(127deg, #f25a46 0%, #eb444d 91%);
+  /* background-image: linear-gradient(127deg, #f25a46 0%, #eb444d 91%); */
+  background-color: #eb444d;
   padding-top: 30px;
 }
 
@@ -1833,7 +1835,7 @@ Single Service
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover; 
-  height: 50vh;
+  height: 60vh;
 }
 
 .single-service .header-text {
@@ -1974,6 +1976,9 @@ Single Service
   bottom: 30px;
   right: 0;
   opacity: 0;
+  color: #fff;
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 10px;
   transition: ease-in-out 0.3s;
   text-align: center;
 }
@@ -2329,4 +2334,112 @@ Single Service
     position: static;
     margin-top: 30px;
   }
+}
+
+/*Profile Card 5*/
+.profile-card-5{
+  margin-top:40px;
+  border: none;
+	transition: transform 0.5s;
+}
+.profile-card-5:hover {
+	transform: translateY(-8px);
+}
+.profile-card-5 .btn{
+    border-radius:2px;
+    text-transform:uppercase;
+    font-size:12px;
+    padding:7px 20px;
+}
+.profile-card-5 .card-img-block {
+    width: 91%;
+    margin: 0 auto;
+    position: relative;
+    top: -20px;
+    
+}
+.profile-card-5 .card-img-block img{
+    border-radius:5px;
+    box-shadow:0 0 10px rgba(0,0,0,0.63);
+}
+.profile-card-5 h5{
+    color:#f89d13;
+    font-weight:600;
+}
+.profile-card-5 p{
+    font-size:14px;
+    font-weight:300;
+}
+.profile-card-5 .btn-primary{
+    background-color:#4E5E30;
+    border-color:#4E5E30;
+}
+
+/* 
+---------------------------------------------
+mission
+--------------------------------------------- 
+*/
+.mission-item {
+  background: #fff;
+  box-shadow: 0 2px 48px 0 rgba(0, 0, 0, 0.10);
+  border-radius: 20px;
+  position: relative;
+  margin-bottom: 30px;
+  padding-bottom: 25px;
+}
+
+.mission-item:hover .mission-content .mission-info {
+  margin-left: 30px;
+}
+
+.mission-item i {
+  display: block;
+  /* margin-left: 25px; */
+  margin-top: 25px;
+  font-size: 30px;
+  color: #eb444d;
+  text-align: center;
+}
+
+.mission-item .user-image {
+  width: 60px;
+  height: 60px;
+  overflow: hidden;
+  -webkit-border-radius: 100px;
+  -moz-border-radius: 100px;
+  border-radius: 100px;
+  -webkit-transition: all 0.3s ease 0s;
+  -moz-transition: all 0.3s ease 0s;
+  -o-transition: all 0.3s ease 0s;
+  transition: all 0.3s ease 0s;
+  margin-left: 25px;
+  float: left;
+}
+
+.mission-item .mission-content {
+  text-align: left;
+  overflow: hidden;
+}
+
+.mission-item .mission-content .mission-info {
+  float: left;
+  margin-left: 20px;
+  margin-top: 8px;
+  -webkit-transition: all 0.3s ease 0s;
+  -moz-transition: all 0.3s ease 0s;
+  -o-transition: all 0.3s ease 0s;
+  transition: all 0.3s ease 0s;
+}
+
+.mission-item .mission-content .mission-info .user-name {
+  margin-top: 25px;
+  padding-left: 30px;
+  padding-right: 30px;
+  margin-bottom: 25px;
+  font-weight: 400;
+  font-size: 15px;
+  color: #777;
+  letter-spacing: 0.6px;
+  line-height: 26px;
 }

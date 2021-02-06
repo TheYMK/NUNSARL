@@ -11,7 +11,10 @@ function SixthServicePage() {
 		<React.Fragment>
 			<Layout>
 				{/* Banner */}
-				<ServiceBanner title={'Référencement'} />
+				<ServiceBanner
+					title={'Référencement'}
+					description={'Référencement naturel, Analyse de trafic, Analyse de l’ergonomie, etc...'}
+				/>
 				<div className="container mt-5 p-5">
 					<p className="text-center" style={{ color: '#777' }}>
 						Ne laissez plus votre SITE WEB dans l'ombre confiez-nous le. Chez NUN SARL nous gérons le

@@ -42,7 +42,9 @@ function Contact() {
 					<div className="row">
 						<div className="col-lg-12">
 							<div className="center-heading">
-								<h2 className="section-title">Contactez Nous</h2>
+								<h2 className="section-title" style={{ fontWeight: '700' }}>
+									Contactez Nous
+								</h2>
 							</div>
 						</div>
 						<div className="offset-lg-3 col-lg-6">

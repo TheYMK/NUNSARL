@@ -4,7 +4,7 @@ import ModalComponent from '../modal/ModalComponent';
 import { sendServiceDemand } from '../../actions/form';
 import { toast } from 'react-toastify';
 
-function ServiceBanner({ title }) {
+function ServiceBanner({ title, description }) {
 	const [ isModalVisible, setIsModalVisible ] = useState(false);
 
 	const [ values, setValues ] = useState({
@@ -16,11 +16,11 @@ function ServiceBanner({ title }) {
 		phone: '',
 		serviceTypes: [
 			'Conseil & stratégie',
-			'Identité de marque',
+			'Identité visuelle et graphique',
 			'Réseaux sociaux',
-			'Développement web & mobile',
-			'Médiatisation',
-			'Référencement'
+			'Web, mobile & référencement',
+			'Multimédia',
+			'Communication évènementielle'
 		]
 	});
 
@@ -55,7 +55,7 @@ function ServiceBanner({ title }) {
 						<div className="row">
 							<div className="offset-xl-3 col-xl-6 offset-lg-2 col-lg-8 col-md-12 col-sm-12">
 								<h1>{title}</h1>
-
+								<p>{description}</p>
 								{/* <Link href="#"> */}
 								<button className="main-button-slider" onClick={showModal}>
 									Demander un devis

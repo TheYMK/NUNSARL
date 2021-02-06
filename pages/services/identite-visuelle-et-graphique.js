@@ -11,7 +11,10 @@ function SecondServicePage() {
 		<React.Fragment>
 			<Layout>
 				{/* Banner */}
-				<ServiceBanner title={'Identité de marque'} />
+				<ServiceBanner
+					title={'Identité visuelle et graphique'}
+					description={'Charte graphique, packaging, tous supports imprimés (brochure, dépliant, PLV, etc.)'}
+				/>
 				<div className="container mt-5 p-5">
 					<p className="text-center" style={{ color: '#777' }}>
 						Chez <strong style={{ color: '#eb444d' }}>NUN SARL</strong> nous croyons beaucoup à la force des

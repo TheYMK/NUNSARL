@@ -42,26 +42,26 @@ const PortfolioDetails = ({ project }) => {
 					</Slider>
 
 					<div className="portfolio-info">
-						<h3>Project information</h3>
+						<h3>À propos</h3>
 						<ul>
 							<li>
-								<strong>Category</strong>: {project.category}
+								<strong>Categorie</strong>: {project.category}
 							</li>
 							<li>
 								<strong>Client</strong>: {project.client}
 							</li>
 							<li>
-								<strong>Project date</strong>: {project.date}
+								<strong>Date de réalisation</strong>: {project.date}
 							</li>
 							<li>
-								<strong>Project URL</strong>: <a href={project.url}>{project.url}</a>
+								<strong>Lien utile</strong>: <a href={project.url}>{project.url}</a>
 							</li>
 						</ul>
 					</div>
 				</div>
 
 				<div className="portfolio-description">
-					<h2>About this project</h2>
+					<h2>Déscription de la mission</h2>
 					<p>{project.description}</p>
 				</div>
 			</div>

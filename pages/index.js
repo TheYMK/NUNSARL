@@ -6,6 +6,7 @@ import WelcomeArea from '../components/welcome/WelcomeArea';
 import Services from '../components/services/Services';
 import InfoA from '../components/info/InfoA';
 import InfoB from '../components/info/InfoB';
+import InfoC from '../components/info/InfoC';
 import Formations from '../components/formations/Formations';
 import Testimonials from '../components/testimonials/Testimonials';
 import PricingPlans from '../components/pricing/PricingPlans';
@@ -17,8 +18,10 @@ import { withRouter } from 'next/router';
 import { DOMAIN, FB_APP_ID } from '../config';
 import Portfolio from '../components/portfolio/Portfolio';
 import { getProjects } from '../actions/project';
+import OurMission from '../components/mission/OurMission';
+import { getMembers } from '../actions/team';
 
-const Home = ({ router, projects }) => {
+const Home = ({ router, projects, members }) => {
 	const head = () => (
 		<Head>
 			<title>NUN SARL | Agence de communication digitale</title>
@@ -52,18 +55,13 @@ et expériences digitales sur mesure | NUN SARL`}
 			<Layout>
 				<WelcomeArea />
 				<Services />
-				<InfoA />
-				<InfoB />
+				<InfoC />
+				<OurMission />
 				<Formations />
 				<Portfolio projects={projects} />
-
-				{/* <PricingPlans /> */}
-				<Team />
-				{/* <Blog /> */}
-				{/* <Projects /> */}
-				<Testimonials />
+				<Team members={members} />
+				{/* <Testimonials /> */}
 				<Contact />
-				<Footer />
 			</Layout>
 		</React.Fragment>
 	);
@@ -71,11 +69,14 @@ et expériences digitales sur mesure | NUN SARL`}
 
 export async function getServerSideProps({ params }) {
 	return getProjects().then((res) => {
-		return {
-			props: {
-				projects: res.data
-			}
-		};
+		return getMembers().then((result) => {
+			return {
+				props: {
+					projects: res.data,
+					members: result.data
+				}
+			};
+		});
 	});
 }
 

@@ -11,7 +11,10 @@ function FourthServicePage() {
 		<React.Fragment>
 			<Layout>
 				{/* Banner */}
-				<ServiceBanner title={'Développement web & mobile'} />
+				<ServiceBanner
+					title={'Développement Web & Mobile'}
+					description={'Site internet, application web & mobile.'}
+				/>
 				<div className="container mt-5 p-5">
 					<p className="text-center" style={{ color: '#777' }}>
 						Un site internet est souvent le coeur du dispositif digital d’une marque ou d’une entreprise. Il

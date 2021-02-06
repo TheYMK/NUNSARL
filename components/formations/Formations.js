@@ -46,13 +46,17 @@ function Formations() {
 						<div className="row">
 							<div className="offset-lg-3 col-lg-6">
 								<div className="info">
-									<h1>Nos formations spécialisées</h1>
+									<h1 style={{ fontWeight: '700' }}>Nos formations spécialisées</h1>
 									<p>
-										Ce sont vos spécificités qui nous permettent de mettre en place des programmes
-										entièrement sur-mesure pour vos formations intra-entreprise. Nos formations
-										inter-entreprise permettent également à vos salariés de se former en-dehors de
-										l’entreprise et de rencontrer des salariés d’autres horizons. Nous nous occupons
-										de toute la logistique et de l’organisation.
+										Nous offrons des ateliers de formation en entreprise, à distance en ligne ou en
+										organisant des évènements. Nos formations sont régies principalement par des
+										modules de Business, de Leadership et management, de la Transformation
+										numérique, IT - Digital, Communication et Marketing. Notre processus
+										d'apprentissage comprend un animateur formateur principal, des vidéos animées,
+										des exercices de renforcement par glisser-déposé, des fiches techniques ainsi
+										que différents types de multimédia - qui sont tous accessibles n'importe où
+										depuis votre mobile, ordinateur portable ou ordinateur de bureau. Efficace,
+										interactif et amusant!
 									</p>
 								</div>
 							</div>
@@ -65,8 +69,9 @@ function Formations() {
 								secondColumn={businessSecondColumn}
 								icon={'fas fa-briefcase'}
 							/>
+
 							<FormationItem
-								title={'Créativité'}
+								title={'Technologie & Créativité'}
 								firstColumn={creativityFirstColumn}
 								secondColumn={creativitySecondColumn}
 								icon={'fas fa-lightbulb'}

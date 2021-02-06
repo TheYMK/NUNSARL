@@ -41,7 +41,12 @@ function FirstServicePage({ router }) {
 			{head()}
 			<Layout>
 				{/* Banner */}
-				<ServiceBanner title={'Conseil & stratégie'} />
+				<ServiceBanner
+					title={'Conseil & stratégie'}
+					description={
+						'Conseil en communication, conception et mise en œuvre de la stratégie  de  l’entreprise '
+					}
+				/>
 				<div className="container mt-5 p-5">
 					<p className="text-center" style={{ color: '#777' }}>
 						L’objectif de nos conseils en stratégie digitale est d’élaborer un plan de marketing numérique

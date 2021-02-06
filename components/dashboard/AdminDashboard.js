@@ -1,5 +1,6 @@
 import React from 'react';
 import ManageProjects from './ManageProjects';
+import ManageTeam from './ManageTeam';
 
 const AdminDashboard = () => {
 	return (
@@ -39,7 +40,7 @@ const AdminDashboard = () => {
 						</div>
 						<div className="tab-pane" id="tab-2">
 							{/* <ManageBlogs /> */}
-							team
+							<ManageTeam />
 						</div>
 						<div className="tab-pane" id="tab-3">
 							{/* <ManageOrders /> */}

@@ -7,12 +7,12 @@ function ProjectCreateModal({ isModalVisible, handleOk, handleCancel, values, se
 
 	return (
 		<Modal
-			title="New Project Details"
+			title="Nouveau projet"
 			visible={isModalVisible}
 			onOk={() => handleOk(values)}
 			onCancel={handleCancel}
-			okText="Create"
-			cancelText="Cancel"
+			okText="Crée"
+			cancelText="Annuler"
 		>
 			<React.Fragment>
 				<div className="p-3">

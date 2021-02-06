@@ -10,7 +10,9 @@ function Testimonials() {
 					<div className="row">
 						<div className="col-lg-12">
 							<div className="center-heading">
-								<h2 className="section-title">Ce qu'en pense nos partenaires?</h2>
+								<h2 className="section-title" style={{ fontWeight: '700' }}>
+									Ce qu'en pense nos partenaires?
+								</h2>
 							</div>
 							<div className="offset-lg-3 col-lg-6">
 								<div className="center-text">
