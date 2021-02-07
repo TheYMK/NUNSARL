@@ -109,7 +109,9 @@ function Login() {
 								_id: response.data._id
 							}
 						});
-						toast.success('Welcome back dear customer, have a wonderful shopping day with us.');
+						toast.success(
+							'Bienvenu cher visiteur! Nous vous souhaitons une experience satisfaisante avec nos services.'
+						);
 						roleBasedRedirect(response);
 					})
 					.catch((err) => console.log(err));
@@ -131,7 +133,7 @@ function Login() {
 					className="form-control"
 					value={email}
 					onChange={(e) => setValues({ ...values, email: e.target.value })}
-					placeholder="Enter your email..."
+					placeholder="johndoe@xxx.xx"
 					autoFocus
 				/>
 			</div>
@@ -141,7 +143,7 @@ function Login() {
 					className="form-control"
 					value={password}
 					onChange={(e) => setValues({ ...values, password: e.target.value })}
-					placeholder="Enter your password..."
+					placeholder="••••••••••"
 				/>
 			</div>
 
@@ -149,27 +151,26 @@ function Login() {
 				onClick={handleSubmit}
 				type="primary"
 				className="mb-2"
-				icon={<MailOutlined />}
 				shape="round"
 				block
 				size="large"
 				loading={loading}
 				disabled={!email || password.length < 6}
 			>
-				Login with Email/Password
+				Se connecter
 			</Button>
 		</form>
 	);
 
 	return (
 		<React.Fragment>
-			<div className="container p-5">
+			<div className="">
 				<div className="row">
 					<div className="col-md-6 offset-md-3">
-						<h4 className="mb-4">Login</h4>
+						<h4 className="mb-4">Connectez-vous à votre compte admin</h4>
 						{loginForm()}
 
-						<Button
+						{/* <Button
 							onClick={googleLogin}
 							type="danger"
 							className=""
@@ -180,10 +181,10 @@ function Login() {
 							loading={loading}
 						>
 							Login with Google
-						</Button>
+						</Button> */}
 
 						<Link href="/auth/password/forgot">
-							<a className="float-right text-danger mt-3">Forgot Password?</a>
+							<a className="float-right text-danger mt-3">Mot de passe oublié?</a>
 						</Link>
 					</div>
 				</div>

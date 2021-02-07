@@ -7,8 +7,9 @@ const LoginPage = () => {
 	return (
 		<React.Fragment>
 			<Layout>
-				<Banner title={'Login Page'} />
-				<div className="container-fluid mt-0 p-5">
+				<Banner title={'Se Connecter'} />
+				<div className="mt-md-5" />
+				<div className="container-fluid px-3 mb-3">
 					<Login />
 				</div>
 			</Layout>

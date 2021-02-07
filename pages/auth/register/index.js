@@ -7,8 +7,9 @@ const RegisterPage = () => {
 	return (
 		<React.Fragment>
 			<Layout>
-				<Banner title={'Register Page'} />
-				<div className="container-fluid mt-0 p-5">
+				<Banner title={'Création de compte'} />
+				<div className="mt-md-5" />
+				<div className="container-fluid px-3 mb-5">
 					<Register />
 				</div>
 			</Layout>
