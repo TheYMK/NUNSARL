@@ -11,18 +11,38 @@ function ServiceBanner({ title, description }) {
 		full_name: '',
 		email: '',
 		orgName: '',
-		serviceType: '',
+		selectedServiceTypes: [],
 		description: '',
 		phone: '',
 		serviceTypes: [
-			'Conseil & stratégie',
-			'Identité visuelle et graphique',
-			'Réseaux sociaux',
-			'Web, mobile & référencement',
-			'Multimédia',
-			'Communication évènementielle'
+			{
+				_id: 1,
+				text: 'Conseil & stratégie'
+			},
+			{
+				_id: 2,
+				text: 'Identité visuelle et graphique'
+			},
+			{
+				_id: 3,
+				text: 'Réseaux sociaux'
+			},
+			{
+				_id: 4,
+				text: 'Développement Web & Mobile'
+			},
+			{
+				_id: 5,
+				text: 'Multimédia'
+			},
+			{
+				_id: 6,
+				text: 'Référencement'
+			}
 		]
 	});
+
+	const { selectedServiceTypes, serviceTypes } = values;
 
 	const showModal = () => {
 		setIsModalVisible(true);
@@ -30,21 +50,48 @@ function ServiceBanner({ title, description }) {
 
 	const handleOk = (v) => {
 		// console.log(v);
-		setIsModalVisible(false);
+
 		sendServiceDemand(v)
 			.then((res) => {
 				toast.success('Votre demande a bien été reçu. Nous vous contacterons le plus tôt possible.');
-				setValues({ ...values, full_name: '', email: '', orgName: '', serviceType: '', description: '' });
-				// setIsModalVisible(false);
+				setValues({
+					...values,
+					full_name: '',
+					email: '',
+					orgName: '',
+					selectedServiceTypes: [],
+					description: ''
+				});
+				setIsModalVisible(false);
 			})
 			.catch((err) => {
 				toast.error("Une erreur est survenu lors de l'envoie de votre demande. Veuillez réessayer.");
-				setValues({ ...values, full_name: '', email: '', orgName: '', serviceType: '', description: '' });
+				setValues({
+					...values,
+					full_name: '',
+					email: '',
+					orgName: '',
+					selectedServiceTypes: [],
+					description: ''
+				});
 			});
 	};
 
 	const handleCancel = () => {
 		setIsModalVisible(false);
+	};
+
+	const handleToggleServices = (text) => () => {
+		const clickedService = selectedServiceTypes.indexOf(text);
+		const allSelectedServices = [ ...selectedServiceTypes ];
+
+		if (clickedService === -1) {
+			allSelectedServices.push(text);
+		} else {
+			allSelectedServices.splice(clickedService, 1);
+		}
+
+		setValues({ ...values, selectedServiceTypes: allSelectedServices });
 	};
 
 	return (
@@ -71,6 +118,7 @@ function ServiceBanner({ title, description }) {
 				handleCancel={handleCancel}
 				handleOk={handleOk}
 				values={values}
+				handleToggleServices={handleToggleServices}
 				setValues={setValues}
 			/>
 		</React.Fragment>

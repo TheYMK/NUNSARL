@@ -2,8 +2,20 @@ import React, { useState } from 'react';
 import { Modal, Button } from 'antd';
 import PhoneInput from 'react-phone-number-input';
 
-function ModalComponent({ isModalVisible, handleOk, handleCancel, values, setValues }) {
-	const { full_name, email, orgName, serviceType, serviceTypes, description, phone } = values;
+function ModalComponent({ isModalVisible, handleOk, handleCancel, values, setValues, handleToggleServices }) {
+	const { full_name, email, orgName, selectedServiceTypes, serviceTypes, description, phone } = values;
+
+	const showServiceTypes = () => {
+		return (
+			serviceTypes &&
+			serviceTypes.map((s, index) => (
+				<li className="list-unstyled" key={index}>
+					<input className="mr-2" type="checkbox" onChange={handleToggleServices(s.text)} />
+					<label className="form-check-label">{s.text}</label>
+				</li>
+			))
+		);
+	};
 
 	return (
 		<Modal
@@ -49,7 +61,7 @@ function ModalComponent({ isModalVisible, handleOk, handleCancel, values, setVal
 							onChange={(e) => setValues({ ...values, phone: e })}
 						/>
 					</div>
-					<div className="form-group col-md-6">
+					<div className="form-group col-md-12">
 						<label htmlFor="orgName">Société</label>
 						<input
 							type="text"
@@ -61,7 +73,7 @@ function ModalComponent({ isModalVisible, handleOk, handleCancel, values, setVal
 							required
 						/>
 					</div>
-					<div className="form-group col-md-6">
+					{/* <div className="form-group col-md-6">
 						<label htmlFor="serviceType" className="form-label">
 							Service souhaité
 						</label>
@@ -79,7 +91,11 @@ function ModalComponent({ isModalVisible, handleOk, handleCancel, values, setVal
 								</option>
 							))}
 						</select>
+					</div> */}
+					<div className="m-3">
+						<ul>{showServiceTypes()}</ul>
 					</div>
+
 					<div className="form-group col-md-12">
 						<label htmlFor="description" className="form-label">
 							Décrivez-nous votre projet et vos objectifs

@@ -27,8 +27,8 @@ function SecondServicePage({ router }) {
 			<meta property="og:type" content="website" />
 			<meta property="og:url" content={`${DOMAIN}${router.pathname}`} />
 			<meta property="og:site_name" content="NUN SARL" />
-			<meta property="og:image" content="/static/images/seo.png" />
-			<meta property="og:image:secure_url" content="/static/images/seo.png" />
+			<meta property="og:image" content={`${DOMAIN}/static/images/seo.png`} />
+			<meta property="og:image:secure_url" content={`${DOMAIN}/static/images/seo.png`} />
 			<meta property="og:image:type" content="image/png" />
 			<meta property="fb:app_id" content={`${FB_APP_ID}`} />
 		</Head>
