@@ -7,8 +7,16 @@ import { getSingleMember, updateMember } from '../../../actions/team';
 import { useSelector } from 'react-redux';
 import { toast } from 'react-toastify';
 import Router from 'next/router';
+import Head from 'next/head';
 
 const TeamMemberUpdatePage = ({ member }) => {
+	const head = () => (
+		<Head>
+			<meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no" />
+			<title>NUN SARL | Équipes</title>
+		</Head>
+	);
+
 	const [ values, setValues ] = useState({
 		full_name: member.full_name,
 		job_title: member.job_title,
@@ -111,17 +119,25 @@ const TeamMemberUpdatePage = ({ member }) => {
 	);
 
 	return (
-		<Layout>
-			<Admin>
-				<Banner title={"Modification d'information"} />
-				<div className="container mb-5 p-5">
-					<div className="p-3">
-						<FileUpload values={values} setValues={setValues} setLoading={setLoading} loading={loading} />
+		<React.Fragment>
+			{head()}
+			<Layout>
+				<Admin>
+					<Banner title={"Modification d'information"} />
+					<div className="container mb-5 p-5">
+						<div className="p-3">
+							<FileUpload
+								values={values}
+								setValues={setValues}
+								setLoading={setLoading}
+								loading={loading}
+							/>
+						</div>
+						{showForm()}
 					</div>
-					{showForm()}
-				</div>
-			</Admin>
-		</Layout>
+				</Admin>
+			</Layout>
+		</React.Fragment>
 	);
 };
 

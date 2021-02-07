@@ -7,8 +7,16 @@ import { useSelector } from 'react-redux';
 import { toast } from 'react-toastify';
 import Router from 'next/router';
 import Banner from '../../../components/header/Banner';
+import Head from 'next/head';
 
 const ProjectUpdatePage = ({ project }) => {
+	const head = () => (
+		<Head>
+			<meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no" />
+			<title>NUN SARL | Projets</title>
+		</Head>
+	);
+
 	const [ values, setValues ] = useState({
 		name: project.name,
 		category: project.category,
@@ -134,17 +142,25 @@ const ProjectUpdatePage = ({ project }) => {
 	);
 
 	return (
-		<Layout>
-			<Admin>
-				<Banner title={'Modification du projet'} />
-				<div className="container mb-5 p-5">
-					<div className="p-3">
-						<FileUpload values={values} setValues={setValues} setLoading={setLoading} loading={loading} />
+		<React.Fragment>
+			{head()}
+			<Layout>
+				<Admin>
+					<Banner title={'Modification du projet'} />
+					<div className="container mb-5 p-5">
+						<div className="p-3">
+							<FileUpload
+								values={values}
+								setValues={setValues}
+								setLoading={setLoading}
+								loading={loading}
+							/>
+						</div>
+						{showForm()}
 					</div>
-					{showForm()}
-				</div>
-			</Admin>
-		</Layout>
+				</Admin>
+			</Layout>
+		</React.Fragment>
 	);
 };
 

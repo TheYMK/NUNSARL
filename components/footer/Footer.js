@@ -23,16 +23,6 @@ function Footer() {
 										<i className="fa fa-linkedin" />
 									</a>
 								</li>
-								<li>
-									<a href="#">
-										<i className="fa fa-rss" />
-									</a>
-								</li>
-								<li>
-									<a href="#">
-										<i className="fa fa-dribbble" />
-									</a>
-								</li>
 							</ul>
 						</div>
 					</div>

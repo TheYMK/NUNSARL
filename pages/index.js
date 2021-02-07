@@ -25,6 +25,7 @@ const Home = ({ router, projects, members }) => {
 	const head = () => (
 		<Head>
 			<title>NUN SARL | Agence de communication digitale</title>
+			<meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no" />
 			<meta
 				name="description"
 				content="NUN SARL représente une agence de communication digital. Son rôle est d’optimiser la présence en ligne des entreprises et de les aider à acquérir une clientèle cible. Mieux encore, la fidéliser, entretenir sa confiance. Chaque partenaire est unique, chaque projet représente un nouveau challenge."
@@ -32,8 +33,7 @@ const Home = ({ router, projects, members }) => {
 			<link rel="canonical" href={`${DOMAIN}${router.pathname}`} />
 			<meta
 				property="og:title"
-				content={`Création de stratégies
-et expériences digitales sur mesure | NUN SARL`}
+				content={`Création de stratégies et expériences digitales sur mesure | NUN SARL`}
 			/>
 			<meta
 				property="og:description"

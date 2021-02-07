@@ -5,10 +5,37 @@ import ServicesInfoLeft from '../../components/services/ServiceInfoLeft';
 import ServiceInfoRight from '../../components/services/ServiceInfoRight';
 import Footer from '../../components/footer/Footer';
 import ServiceBanner from '../../components/services/ServiceBanner';
+import Head from 'next/head';
+import { DOMAIN, FB_APP_ID } from '../../config';
+import { withRouter } from 'next/router';
 
-function FifthServicePage() {
+function FifthServicePage({ router }) {
+	const head = () => (
+		<Head>
+			<title>NUN SARL | Multimédia</title>
+			<meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no" />
+			<meta
+				name="description"
+				content="Que l’on veuille diffuser des messages au plus grand nombre, développer sa communauté ou même tout simplement l’animer et l’engager, les investissements médias sur les réseaux sociaux sont aujourd’hui devenus une obligation. Pour répondre à vos attentes et développer des communautés actives et impliquées, nous nous engageons toujours sur des résultats garantis avec comme ambition de toujours les dépasser !"
+			/>
+			<link rel="canonical" href={`${DOMAIN}${router.pathname}`} />
+			<meta property="og:title" content={`Cibler les futurs fans de votre marque | NUN SARL`} />
+			<meta
+				property="og:description"
+				content="Que l’on veuille diffuser des messages au plus grand nombre, développer sa communauté ou même tout simplement l’animer et l’engager, les investissements médias sur les réseaux sociaux sont aujourd’hui devenus une obligation. Pour répondre à vos attentes et développer des communautés actives et impliquées, nous nous engageons toujours sur des résultats garantis avec comme ambition de toujours les dépasser !"
+			/>
+			<meta property="og:type" content="website" />
+			<meta property="og:url" content={`${DOMAIN}${router.pathname}`} />
+			<meta property="og:site_name" content="NUN SARL" />
+			<meta property="og:image" content="/static/images/seo.png" />
+			<meta property="og:image:secure_url" content="/static/images/seo.png" />
+			<meta property="og:image:type" content="image/png" />
+			<meta property="fb:app_id" content={`${FB_APP_ID}`} />
+		</Head>
+	);
 	return (
 		<React.Fragment>
+			{head()}
 			<Layout>
 				{/* Banner */}
 				<ServiceBanner title={'Multimédia'} description={'Spot publicitaire (TV et Radio), publi-reportage'} />
@@ -37,4 +64,4 @@ function FifthServicePage() {
 	);
 }
 
-export default FifthServicePage;
+export default withRouter(FifthServicePage);

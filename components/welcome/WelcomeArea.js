@@ -79,7 +79,7 @@ function WelcomeArea() {
 								user.role === 'admin' && (
 									<Link href="/admin/dashboard">
 										<a className="main-button-slider mr-3" style={{ background: '#000' }}>
-											Dashboard
+											Tableau de bord
 										</a>
 									</Link>
 								)}
@@ -92,7 +92,7 @@ function WelcomeArea() {
 										onClick={logout}
 										href=""
 									>
-										Logout
+										Deconnexion
 									</button>
 								)}
 

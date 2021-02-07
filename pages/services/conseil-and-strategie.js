@@ -13,6 +13,7 @@ function FirstServicePage({ router }) {
 	const head = () => (
 		<Head>
 			<title>NUN SARL | Conseil et stratégie</title>
+			<meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no" />
 			<meta
 				name="description"
 				content="L’objectif de nos conseils en stratégie digitale est d’élaborer un plan de marketing numérique précis qui prend en compte vos objectifs marketing globaux. Accroître votre notoriété, augmenter vos revenus, gagner en efficacité, réduire les coûts et mieux communiquer avec vos clients, font partie des priorités essentielles à la réussite de votre entreprise."

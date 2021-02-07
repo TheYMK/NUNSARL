@@ -5,8 +5,38 @@ import ServicesInfoLeft from '../../components/services/ServiceInfoLeft';
 import ServiceInfoRight from '../../components/services/ServiceInfoRight';
 import Footer from '../../components/footer/Footer';
 import ServiceBanner from '../../components/services/ServiceBanner';
+import Head from 'next/head';
+import { DOMAIN, FB_APP_ID } from '../../config';
+import { withRouter } from 'next/router';
 
-function ThirdServicePage() {
+function ThirdServicePage({ router }) {
+	const head = () => (
+		<Head>
+			<title>NUN SARL | Réseaux sociaux</title>
+			<meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no" />
+			<meta
+				name="description"
+				content="Les réseaux sociaux représentent aujourd’hui le premier point de contact d’une organisation avec un utilisateur et un client potentiel. Au premier coup d’œil, vous devez le convaincre de la pertinence et de la qualité de votre contenu pour l’inciter à aller plus loin. NUN SARL crée pour vous une stratégie de communication précise et adaptée sur les réseaux sociaux."
+			/>
+			<link rel="canonical" href={`${DOMAIN}${router.pathname}`} />
+			<meta
+				property="og:title"
+				content={`Des contenus percutants pour une communication performante | NUN SARL`}
+			/>
+			<meta
+				property="og:description"
+				content="Les réseaux sociaux représentent aujourd’hui le premier point de contact d’une organisation avec un utilisateur et un client potentiel. Au premier coup d’œil, vous devez le convaincre de la pertinence et de la qualité de votre contenu pour l’inciter à aller plus loin. NUN SARL crée pour vous une stratégie de communication précise et adaptée sur les réseaux sociaux."
+			/>
+			<meta property="og:type" content="website" />
+			<meta property="og:url" content={`${DOMAIN}${router.pathname}`} />
+			<meta property="og:site_name" content="NUN SARL" />
+			<meta property="og:image" content="/static/images/seo.png" />
+			<meta property="og:image:secure_url" content="/static/images/seo.png" />
+			<meta property="og:image:type" content="image/png" />
+			<meta property="fb:app_id" content={`${FB_APP_ID}`} />
+		</Head>
+	);
+
 	return (
 		<React.Fragment>
 			<Layout>
@@ -53,4 +83,4 @@ function ThirdServicePage() {
 	);
 }
 
-export default ThirdServicePage;
+export default withRouter(ThirdServicePage);

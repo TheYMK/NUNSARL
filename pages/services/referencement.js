@@ -5,10 +5,38 @@ import ServicesInfoLeft from '../../components/services/ServiceInfoLeft';
 import ServiceInfoRight from '../../components/services/ServiceInfoRight';
 import Footer from '../../components/footer/Footer';
 import ServiceBanner from '../../components/services/ServiceBanner';
+import Head from 'next/head';
+import { DOMAIN, FB_APP_ID } from '../../config';
+import { withRouter } from 'next/router';
 
-function SixthServicePage() {
+function SixthServicePage({ router }) {
+	const head = () => (
+		<Head>
+			<title>NUN SARL | Référencement</title>
+			<meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no" />
+			<meta
+				name="description"
+				content="Ne laissez plus votre SITE WEB dans l'ombre confiez-nous le. Chez NUN SARL nous gérons le référencement de votre site internet."
+			/>
+			<link rel="canonical" href={`${DOMAIN}${router.pathname}`} />
+			<meta property="og:title" content={`Analyse métier pour mieux cerner vos besoins | NUN SARL`} />
+			<meta
+				property="og:description"
+				content="Ne laissez plus votre SITE WEB dans l'ombre confiez-nous le. Chez NUN SARL nous gérons le référencement de votre site internet."
+			/>
+			<meta property="og:type" content="website" />
+			<meta property="og:url" content={`${DOMAIN}${router.pathname}`} />
+			<meta property="og:site_name" content="NUN SARL" />
+			<meta property="og:image" content="/static/images/seo.png" />
+			<meta property="og:image:secure_url" content="/static/images/seo.png" />
+			<meta property="og:image:type" content="image/png" />
+			<meta property="fb:app_id" content={`${FB_APP_ID}`} />
+		</Head>
+	);
+
 	return (
 		<React.Fragment>
+			{head()}
 			<Layout>
 				{/* Banner */}
 				<ServiceBanner
@@ -91,4 +119,4 @@ function SixthServicePage() {
 	);
 }
 
-export default SixthServicePage;
+export default withRouter(SixthServicePage);
