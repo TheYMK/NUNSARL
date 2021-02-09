@@ -32,7 +32,7 @@ function InfoA() {
 							data-scroll-reveal="enter left move 30px over 0.6s after 0.4s"
 						>
 							<img
-								src="/static/images/left-img.jpg"
+								src="/static/images/left-img.webp"
 								className="rounded img-fluid d-block mx-auto"
 								alt="App"
 							/>

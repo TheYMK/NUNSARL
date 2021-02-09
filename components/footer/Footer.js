@@ -1,4 +1,5 @@
 import React from 'react';
+import Link from 'next/link';
 
 function Footer() {
 	return (
@@ -30,6 +31,16 @@ function Footer() {
 								</li>
 							</ul>
 						</div>
+					</div>
+					<div className="text-center mt-4">
+						<Link href="/politique-de-confidentialite">
+							<a style={{ color: '#fff' }}>Politique de confidentialité</a>
+						</Link>
+					</div>
+					<div className="text-center mt-4">
+						<Link href="/mentions-legales">
+							<a style={{ color: '#fff' }}>Mentions Legales</a>
+						</Link>
 					</div>
 					<div className="row">
 						<div className="col-lg-12">

@@ -1831,7 +1831,7 @@ Single Service
   display: flex;
   align-items: center;
   justify-content: center;
-  background-image: url(/static/images/banner-bg.png);
+  background-image: url(/static/images/banner-bg.webp);
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover; 

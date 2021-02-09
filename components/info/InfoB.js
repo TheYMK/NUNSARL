@@ -11,7 +11,7 @@ function InfoB() {
 							data-scroll-reveal="enter right move 30px over 0.6s after 0.4s"
 						>
 							<img
-								src="/static/images/right-img.jpg"
+								src="/static/images/right-img.webp"
 								className="rounded img-fluid d-block mx-auto"
 								alt="App"
 							/>

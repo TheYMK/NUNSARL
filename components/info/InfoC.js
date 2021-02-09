@@ -12,7 +12,7 @@ function InfoC() {
 							data-scroll-reveal="enter left move 30px over 0.6s after 0.4s"
 						>
 							<img
-								src="/static/images/aboutnun.jpg"
+								src="/static/images/aboutnun.webp"
 								className="rounded img-fluid d-block mx-auto"
 								alt="App"
 							/>
