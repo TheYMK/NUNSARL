@@ -77,7 +77,9 @@ function Login() {
 						}
 					});
 
-					toast.success('Welcome dear customer. I wish you a satisfying experience on my plateform.');
+					toast.success(
+						'Bienvenu cher visiteur! Nous vous souhaitons une experience satisfaisante avec nos services.'
+					);
 					roleBasedRedirect(response);
 				})
 				.catch((err) => console.log(err));

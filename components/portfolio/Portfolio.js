@@ -1,5 +1,6 @@
 import React from 'react';
 import PortfolioItem from './PortfolioItem';
+import Link from 'next/link';
 
 const Portfolio = ({ projects }) => {
 	return (
@@ -11,7 +12,18 @@ const Portfolio = ({ projects }) => {
 					</div>
 				</div>
 
-				<ul id="portfolio-flters" className="d-flex justify-content-end">
+				<div className="container text-center">
+					<div className="mb-5">
+						<p style={{ color: '#777', fontSize: '15px', fontWeight: '400' }}>
+							A chaque projet, sa vision, ses résultats concrets visibles et son partenariat.
+						</p>
+					</div>
+					<Link href="/project">
+						<a className="main-button text-white">Découvrez tous nos projets !</a>
+					</Link>
+				</div>
+
+				{/* <ul id="portfolio-flters" className="d-flex justify-content-end">
 					<li data-filter="*" className="filter-active">
 						All
 					</li>
@@ -30,7 +42,7 @@ const Portfolio = ({ projects }) => {
 							slug={p.slug}
 						/>
 					))}
-				</div>
+				</div> */}
 			</div>
 		</section>
 	);

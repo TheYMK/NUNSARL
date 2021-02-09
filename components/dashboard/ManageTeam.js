@@ -78,36 +78,38 @@ const ManageTeam = () => {
 	};
 
 	const showMembers = () => (
-		<table className="table">
-			<thead>
-				<tr>
-					<th scope="col">#</th>
-					<th scope="col">Nom & Prénom</th>
-					<th scope="col">Poste occupé</th>
-					<th scope="col">Action</th>
-				</tr>
-			</thead>
-			<tbody>
-				{teamMembers.map((m, i) => (
-					<tr key={m._id}>
-						<th scope="row">{i + 1}</th>
-
-						<td>{m.full_name}</td>
-						<td>{m.job_title}</td>
-
-						<td>
-							<button className="badge bg-danger btn" onClick={(e) => handleRemove(m._id)}>
-								Supprimer
-							</button>
-							<br />
-							<Link href={`/admin/team/${m._id}`}>
-								<a className="badge bg-warning btn">Modifier</a>
-							</Link>
-						</td>
+		<div className="table-responsive">
+			<table className="table">
+				<thead>
+					<tr>
+						<th scope="col">#</th>
+						<th scope="col">Nom & Prénom</th>
+						<th scope="col">Poste occupé</th>
+						<th scope="col">Action</th>
 					</tr>
-				))}
-			</tbody>
-		</table>
+				</thead>
+				<tbody>
+					{teamMembers.map((m, i) => (
+						<tr key={m._id}>
+							<th scope="row">{i + 1}</th>
+
+							<td>{m.full_name}</td>
+							<td>{m.job_title}</td>
+
+							<td>
+								<button className="badge bg-danger btn" onClick={(e) => handleRemove(m._id)}>
+									Supprimer
+								</button>
+								<br />
+								<Link href={`/admin/team/${m._id}`}>
+									<a className="badge bg-warning btn">Modifier</a>
+								</Link>
+							</td>
+						</tr>
+					))}
+				</tbody>
+			</table>
+		</div>
 	);
 
 	const handleCancel = (v) => {

@@ -8,7 +8,7 @@ import Head from 'next/head';
 import { DOMAIN, FB_APP_ID } from '../../config';
 import { withRouter } from 'next/router';
 
-const ProjectPage = ({ project, relatedProjects, router }) => {
+const ProjectDetailPage = ({ project, relatedProjects, router }) => {
 	const head = () => (
 		<Head>
 			<title>NUN SARL | Portfolio</title>
@@ -59,4 +59,4 @@ export async function getServerSideProps({ params }) {
 	});
 }
 
-export default withRouter(ProjectPage);
+export default withRouter(ProjectDetailPage);
