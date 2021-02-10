@@ -35,7 +35,7 @@ const AboutUsPage = ({ router }) => {
 		<React.Fragment>
 			{head()}
 			<Layout>
-				<div className="single-service">
+				<div className="general-banner">
 					<div className="header-text">
 						<div className="container">
 							<div className="row">

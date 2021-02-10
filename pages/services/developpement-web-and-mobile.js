@@ -64,12 +64,12 @@ function FourthServicePage({ router }) {
 				<ServicesInfoLeft
 					title={'L’atout qui va vous faire réussir'}
 					description={`Générer des demandes entrantes, susciter des candidatures, valoriser votre marque, gagner en légitimité, rendre fiers vos collaborateurs, …. votre site internet a tous ces pouvoirs si sa réalisation est prise en charge par une agence possédant les différentes expertises concernées.`}
-					imgSrc={'/static/images/services/4/1.jpg'}
+					imgSrc={'/static/images/services/4/1.webp'}
 				/>
 				<ServiceInfoRight
 					title={'Un design très valorisant'}
 					description={`NUN SARL conçoit des interfaces graphiques en phase avec les dernières tendances du moment. Après une phase d’UX en mode co-création et l’analyse des « persona », le studio créatif désigne le site en faisant la synthèse entre votre brief, votre charte graphique et les tendances digitales esthétiques qui valoriseront au mieux votre entreprise ou votre marque. `}
-					imgSrc={'/static/images/services/4/2.jpg'}
+					imgSrc={'/static/images/services/4/2.webp'}
 				/>
 
 				<div className="row">
@@ -81,7 +81,7 @@ function FourthServicePage({ router }) {
 				<ServicesInfoLeft
 					title={'Des contenus de grande qualité. Sans y passer trop de temps.'}
 					description={`NUN SARL peut vous aider dans la création des contenus du site. Qu’il s’agisse de la rédaction des textes, des photographies, de vidéos ou de motion design, Adveris dispose d’un réseau de partenaires pouvant répondre à tous les besoins, dans tous les secteurs d’activité.`}
-					imgSrc={'/static/images/services/4/3.jpg'}
+					imgSrc={'/static/images/services/4/3.webp'}
 				/>
 			</Layout>
 		</React.Fragment>

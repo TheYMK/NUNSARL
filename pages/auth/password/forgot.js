@@ -7,6 +7,7 @@ import Router from 'next/router';
 import { Button } from 'antd';
 import { FORGOT_PASSWORD_REDIRECT_URL } from '../../../config';
 import Banner from '../../../components/header/Banner';
+import Head from 'next/head';
 
 function ForgotPasswordPage() {
 	const [ values, setValues ] = useState({
@@ -48,8 +49,16 @@ function ForgotPasswordPage() {
 		}
 	};
 
+	const head = () => (
+		<Head>
+			<meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no" />
+			<title>NUN SARL | Password reset</title>
+		</Head>
+	);
+
 	return (
 		<React.Fragment>
+			{head()}
 			<Layout>
 				<Banner title={'Password Reset Page'} />
 				<div className="container">

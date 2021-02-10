@@ -1,10 +1,18 @@
 import React from 'react';
 import Layout from '../../components/Layout';
 import Banner from '../../components/header/Banner';
+import Head from 'next/head';
 
-const ConfidentialiyPage = () => {
+const ConfidentialityPage = () => {
+	const head = () => (
+		<Head>
+			<meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no" />
+			<title>NUN SARL | Politique de confidentialité</title>
+		</Head>
+	);
 	return (
 		<div>
+			{head()}
 			<Layout>
 				<Banner title={'Politique de confidentialité'} />
 				<div className="container-fluid">
@@ -803,4 +811,4 @@ const ConfidentialiyPage = () => {
 	);
 };
 
-export default ConfidentialiyPage;
+export default ConfidentialityPage;

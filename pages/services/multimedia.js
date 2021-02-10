@@ -52,12 +52,12 @@ function FifthServicePage({ router }) {
 				<ServicesInfoLeft
 					title={`Cibler les futurs fans de votre marque.`}
 					description={`Nous avons développé une forte expertise dans la gestion de campagnes de médiatisation sur les réseaux sociaux. Notre objectif, lorsque nous ciblons certaines catégories socio-démographiques d’internautes, est de créer des communautés actives et impliquées. Notre indicateur favori : le taux d’engagement.`}
-					imgSrc={'/static/images/services/5/2.jpg'}
+					imgSrc={'/static/images/services/5/2.webp'}
 				/>
 				<ServiceInfoRight
 					title={'Optimisez votre visibilité.'}
 					description={`Parce qu’on ne peut pas faire de feu sans étincelle, la médiatisation est aujourd’hui un élément indispensable pour donner de la visibilité à vos messages et campagnes. Des campagnes Adwords, aux investissements sur les réseaux sociaux, nous étudions, définissons et créons des campagnes que nous optimisons en vue d’atteindre les objectifs que nous nous sommes fixés, avec vous. Chaque campagne fait l’objet d’un reporting mensuel chiffré et détaillé pour un meilleur suivi de votre progression et une meilleure transparence sur les investissements que vous réalisez.`}
-					imgSrc={'/static/images/services/5/3.jpg'}
+					imgSrc={'/static/images/services/5/3.webp'}
 				/>
 			</Layout>
 		</React.Fragment>

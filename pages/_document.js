@@ -6,7 +6,7 @@ const { publicRuntimeConfig } = getConfig();
 class MyDocument extends Document {
 	render() {
 		return (
-			<Html lang="en">
+			<Html lang="fr">
 				<Head>
 					<meta charSet="UTF-8" />
 					<link

@@ -7,6 +7,7 @@ import { Button } from 'antd';
 import { useDispatch, useSelector } from 'react-redux';
 import { createOrUpdateUser } from '../../../actions/auth';
 import Banner from '../../../components/header/Banner';
+import Head from 'next/head';
 
 function RegisterComplete() {
 	const [ values, setValues ] = useState({
@@ -29,13 +30,13 @@ function RegisterComplete() {
 		setValues({ ...values, loading: true });
 
 		if (!email || !password) {
-			toast.error('Email and password is required');
+			toast.error("L'email est requis!");
 			setValues({ ...values, loading: false });
 			return;
 		}
 
 		if (password.length < 6) {
-			toast.error('Password must be at least 6 characters long');
+			toast.error('Le mot de passe doit contenir au moins 6 caractères!');
 			setValues({ ...values, loading: false });
 			return;
 		}
@@ -103,8 +104,16 @@ function RegisterComplete() {
 		</form>
 	);
 
+	const head = () => (
+		<Head>
+			<meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no" />
+			<title>NUN SARL | Complete registration</title>
+		</Head>
+	);
+
 	return (
 		<React.Fragment>
+			{head()}
 			<Layout>
 				<Banner title={'Complete registration'} />
 				<div className="container-fluid p-5">

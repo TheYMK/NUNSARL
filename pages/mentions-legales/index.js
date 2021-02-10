@@ -1,10 +1,18 @@
 import React from 'react';
 import Layout from '../../components/Layout';
 import Banner from '../../components/header/Banner';
+import Head from 'next/head';
 
-const MentionsLegalesPage = () => {
+const LegalMentionsPage = () => {
+	const head = () => (
+		<Head>
+			<meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no" />
+			<title>NUN SARL | Mentions Legales</title>
+		</Head>
+	);
 	return (
 		<div>
+			{head()}
 			<Layout>
 				<Banner title={'Mentions Legales'} />
 				<div className="container-fluid">
@@ -69,19 +77,6 @@ const MentionsLegalesPage = () => {
 							</strong>
 							<br />
 							<br />
-							<u>
-								<strong>CREDITS :</strong>
-							</u>{' '}
-							les mentions légales ont étés générées par{' '}
-							<strong>
-								<a href="https://www.generer-mentions-legales.com">mentions légales</a>
-							</strong>
-							<br />
-							Horaires de la <strong>
-								<a href="http://www.patinoire.biz/p+patinoire-de-lyon---charlemagne+113.html">
-									Patinoire Lyon
-								</a>
-							</strong>
 						</p>
 					</div>
 				</div>
@@ -90,4 +85,4 @@ const MentionsLegalesPage = () => {
 	);
 };
 
-export default MentionsLegalesPage;
+export default LegalMentionsPage;

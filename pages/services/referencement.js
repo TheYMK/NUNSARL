@@ -57,7 +57,7 @@ function SixthServicePage({ router }) {
                 Pour mieux comprendre vos besoins, nous analysons l’identité de votre entreprise et de votre distinction propre, comme une « psychanalyse » de votre activité ! C’est ainsi que la connaissance de votre métier et de votre personnalité « professionnelle » sera une véritable force pour avancer, avec vous, dans une stratégie globale.
 
                 Nous aurons pour seul but de vous accompagner en ayant une vision alternative de votre entité pour une meilleure complémentarité. Seul vous connaissez votre entreprise, son organisation, vos collaborateurs, vos clients, et tous les rouages qui composent l’activité de votre entreprise.`}
-					imgSrc={'/static/images/services/6/1.jpg'}
+					imgSrc={'/static/images/services/6/1.webp'}
 				/>
 
 				<section className="section padding-bottom-100">
@@ -106,7 +106,7 @@ function SixthServicePage({ router }) {
 								data-scroll-reveal="enter right move 30px over 0.6s after 0.4s"
 							>
 								<img
-									src={'/static/images/services/6/2.jpeg'}
+									src={'/static/images/services/6/2.webp'}
 									className="rounded img-fluid d-block mx-auto"
 									alt="App"
 								/>

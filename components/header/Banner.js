@@ -4,7 +4,7 @@ import Link from 'next/link';
 function Banner({ title }) {
 	return (
 		<React.Fragment>
-			<div className="single-service">
+			<div className="general-banner">
 				<div className="header-text">
 					<div className="container">
 						<div className="row">

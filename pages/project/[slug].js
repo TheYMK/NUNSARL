@@ -13,10 +13,16 @@ const ProjectDetailPage = ({ project, relatedProjects, router }) => {
 		<Head>
 			<title>NUN SARL | Portfolio</title>
 			<meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no" />
-			<meta name="description" content="" />
+			<meta
+				name="description"
+				content="Découvrez la liste incroyable de projets réalisés par notre agence. Qu'attendez-vous pour proposer le votre ?"
+			/>
 			<link rel="canonical" href={`${DOMAIN}${router.pathname}`} />
 			<meta property="og:title" content={`Nos Réalisations | NUN SARL`} />
-			<meta property="og:description" content="" />
+			<meta
+				property="og:description"
+				content="Découvrez la liste incroyable de projets réalisés par notre agence. Qu'attendez-vous pour proposer le votre ?"
+			/>
 			<meta property="og:type" content="website" />
 			<meta property="og:url" content={`${DOMAIN}${router.pathname}`} />
 			<meta property="og:site_name" content="NUN SARL" />
@@ -26,7 +32,6 @@ const ProjectDetailPage = ({ project, relatedProjects, router }) => {
 			<meta property="fb:app_id" content={`${FB_APP_ID}`} />
 		</Head>
 	);
-
 	return (
 		<React.Fragment>
 			{head()}
