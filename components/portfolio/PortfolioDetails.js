@@ -1,63 +1,59 @@
-import React from 'react';
-import Slider from 'react-slick';
-
-const settings = {
-	dots: true,
-	infinite: true,
-	speed: 500,
-	slidesToShow: 1,
-	slidesToScroll: 1,
-	swipe: true
-};
+import React, { useState } from 'react';
+import Carousel from 'react-elastic-carousel';
 
 const PortfolioDetails = ({ project }) => {
+	const images =
+		project.images.length > 0 ? (
+			project.images.map((img, i) => <img src={img.url} className="img-fluid" alt="project image" />)
+		) : (
+			<img src={'/static/images/noimage.jpg'} className="img-fluid" alt="project image" />
+		);
+
 	return (
 		<section id="portfolio-details" className="portfolio-details">
-			<div className="container">
-				<div className="portfolio-details-container">
-					{/* <div className="owl-carousel portfolio-details-carousel">
-						<img src="/static/img/portfolio/portfolio-details-1.jpg" className="img-fluid" alt="" />
-						<img src="/static/img/portfolio/portfolio-details-2.jpg" className="img-fluid" alt="" />
-						<img src="/static/img/portfolio/portfolio-details-3.jpg" className="img-fluid" alt="" />
-					</div> */}
-					<Slider {...settings} className="">
+			<div className="container-fluid">
+				<div className="mb-3">
+					<Carousel
+						easing="cubic-bezier(1,.15,.55,1.54)"
+						tiltEasing="cubic-bezier(0.110, 1, 1.000, 0.210)"
+						transitionMs={700}
+					>
 						{project.images.length > 0 ? (
 							project.images.map((img, i) => (
-								<div key={i}>
-									<img src={img.url} className="img-fluid" alt="project image" />
-								</div>
+								<img
+									src={img.url}
+									className="img-fluid"
+									alt="project image"
+									style={{ width: '500px' }}
+								/>
 							))
 						) : (
-							<img src={'/static/images/noimage.jpg'} className="img-fluid" alt="project image" />
+							<img
+								src={'/static/images/noimage.jpg'}
+								className="img-thumbnail"
+								alt="project image"
+								style={{ width: '50px' }}
+							/>
 						)}
-						{/* <div>
-							<img src="/static/img/portfolio/portfolio-details-1.jpg" className="img-fluid" alt="" />
-						</div>
-						<div>
-							<img src="/static/img/portfolio/portfolio-details-2.jpg" className="img-fluid" alt="" />
-						</div>
-						<div>
-							<img src="/static/img/portfolio/portfolio-details-3.jpg" className="img-fluid" alt="" />
-						</div> */}
-					</Slider>
+					</Carousel>
+				</div>
 
-					<div className="portfolio-info">
-						<h3>À propos</h3>
-						<ul>
-							<li>
-								<strong>Categorie</strong>: {project.category}
-							</li>
-							<li>
-								<strong>Client</strong>: {project.client}
-							</li>
-							<li>
-								<strong>Date de réalisation</strong>: {project.date}
-							</li>
-							<li>
-								<strong>Lien utile</strong>: <a href={project.url}>{project.url}</a>
-							</li>
-						</ul>
-					</div>
+				<div className="portfolio-info">
+					<h3>À propos</h3>
+					<ul>
+						<li>
+							<strong>Categorie</strong>: {project.category}
+						</li>
+						<li>
+							<strong>Client</strong>: {project.client}
+						</li>
+						<li>
+							<strong>Date de réalisation</strong>: {project.date}
+						</li>
+						<li>
+							<strong>Lien utile</strong>: <a href={project.url}>{project.url}</a>
+						</li>
+					</ul>
 				</div>
 
 				<div className="portfolio-description">

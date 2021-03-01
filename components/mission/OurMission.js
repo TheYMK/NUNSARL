@@ -14,7 +14,7 @@ const OurMission = () => {
 							NOTRE MISSION
 						</h5>
 						<div className="mission-info">
-							<p className="user-name text-center px-5">
+							<p className="user-name px-5" style={{ textAlign: 'justify' }}>
 								Notre mission consiste à proposer et à développer des solutions innovantes de qualités
 								accessibles et adaptés aux besoins des entreprises et au grand public. Nous étudions les
 								problèmes de chaque secteur économique et nous proposons des solutions et outils
@@ -22,7 +22,7 @@ const OurMission = () => {
 								au programme national de l’administration numérique et de l’économie digitale des îles
 								des Comores.
 							</p>
-							<p className="user-name text-center px-5">
+							<p className="user-name px-5" style={{ textAlign: 'justify' }}>
 								Notre vision est simple : devenir le leader national de référence dans le domaine de la
 								technologie de l’information et de la communication en contribuant à son développement à
 								sa mise en application dans l’intérêt des entreprises et du grand public.

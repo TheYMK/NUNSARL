@@ -14,7 +14,6 @@ function Formations() {
 
 	const businessSecondColumn = [
 		'SEO',
-		'Statistiques web',
 		'Outils bureautiques',
 		'Développement de carrière',
 		'Outils de productivité',
@@ -23,7 +22,7 @@ function Formations() {
 
 	const creativityFirstColumn = [
 		'3D & Animation',
-		'Rendu visuel',
+		'Statistiques web',
 		'Architecture',
 		'Design industriel',
 		'Illustration',
