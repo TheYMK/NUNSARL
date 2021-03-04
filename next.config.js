@@ -2,6 +2,19 @@ const withCSS = require('@zeit/next-css');
 
 // We can export env variables using publicRuntimeConfig
 module.exports = withCSS({
+	webpack: function(config) {
+		config.module.rules.push({
+			test: /\.(eot|woff|woff2|ttf|svg|png|jpg|gif)$/,
+			use: {
+				loader: 'url-loader',
+				options: {
+					limit: 100000,
+					name: '[name].[ext]'
+				}
+			}
+		});
+		return config;
+	},
 	publicRuntimeConfig: {
 		API_URL: 'http://localhost:8000/api',
 		PRODUCTION: false,

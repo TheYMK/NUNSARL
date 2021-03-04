@@ -1,44 +1,65 @@
 import React, { useState } from 'react';
-import Carousel from 'react-elastic-carousel';
+import Slider from 'react-slick';
+
+function SampleNextArrow(props) {
+	const { className, style, onClick } = props;
+	return (
+		<div className={className} style={{ ...style, display: 'block' }} onClick={onClick}>
+			<i className="fas fa-arrow-circle-right" />
+		</div>
+	);
+}
+
+function SamplePrevArrow(props) {
+	const { className, style, onClick } = props;
+	return (
+		<div className={className} style={{ ...style, display: 'block' }} onClick={onClick}>
+			<i className="fas fa-arrow-circle-left" />
+		</div>
+	);
+}
 
 const PortfolioDetails = ({ project }) => {
-	const images =
-		project.images.length > 0 ? (
-			project.images.map((img, i) => <img src={img.url} className="img-fluid" alt="project image" />)
-		) : (
-			<img src={'/static/images/noimage.jpg'} className="img-fluid" alt="project image" />
-		);
-
+	const settings = {
+		dots: true,
+		infinite: true,
+		arrows: true,
+		speed: 500,
+		slidesToShow: 1,
+		slidesToScroll: 1,
+		accessibility: true,
+		arrows: true,
+		edgeFriction: 1,
+		nextArrow: <SampleNextArrow />,
+		prevArrow: <SamplePrevArrow />
+	};
 	return (
 		<section id="portfolio-details" className="portfolio-details">
-			<div className="container-fluid">
-				<div className="mb-3">
-					<Carousel
-						easing="cubic-bezier(1,.15,.55,1.54)"
-						tiltEasing="cubic-bezier(0.110, 1, 1.000, 0.210)"
-						transitionMs={700}
-					>
+			<div className="container">
+				<div className="d-flex justify-content-center">
+					<Slider {...settings} className="w-50">
 						{project.images.length > 0 ? (
 							project.images.map((img, i) => (
-								<img
-									src={img.url}
-									className="img-fluid"
-									alt="project image"
-									style={{ width: '500px' }}
-								/>
+								<div key={i}>
+									<img src={img.url} className="img-fluid" alt="project image" />
+								</div>
 							))
 						) : (
-							<img
-								src={'/static/images/noimage.jpg'}
-								className="img-thumbnail"
-								alt="project image"
-								style={{ width: '50px' }}
-							/>
+							<img src={'/static/img/noimage.jpg'} className="img-fluid" alt="project image" />
 						)}
-					</Carousel>
+						{/* <div>
+							<img src="/static/img/portfolio/portfolio-details-1.jpg" className="img-fluid" alt="" />
+						</div>
+						<div>
+							<img src="/static/img/portfolio/portfolio-details-2.jpg" className="img-fluid" alt="" />
+						</div>
+						<div>
+							<img src="/static/img/portfolio/portfolio-details-3.jpg" className="img-fluid" alt="" />
+						</div> */}
+					</Slider>
 				</div>
 
-				<div className="portfolio-info">
+				<div className="portfolio-info mt-5">
 					<h3>À propos</h3>
 					<ul>
 						<li>

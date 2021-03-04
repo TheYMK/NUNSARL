@@ -2334,6 +2334,11 @@ Single Service
   margin-bottom: 20px;
 }
 
+.project-slider {
+  align-self: center;
+  justify-content: center;
+}
+
 .portfolio-details .portfolio-description p {
   padding: 0 0 0 0;
 }
@@ -2451,6 +2456,7 @@ mission
   color: #777;
   letter-spacing: 0.6px;
   line-height: 26px;
+ 
 }
 
 /* 
@@ -2670,4 +2676,23 @@ General Banner
 .rec.rec-arrow:hover {
   color: white !important;
   background-color: red !important;
+}
+
+
+.slick-prev, .slick-next {
+  font-size: 35px !important;
+  color: #eb444d !important;
+}
+
+.slick-next {
+  right: -5.4rem;
+}
+
+.slick-prev {
+  left: -5.4rem;
+}
+
+ .slick-prev:before, .slick-next:before  {
+  content: '' !important;
+  color: #eb444d !important;
 }
